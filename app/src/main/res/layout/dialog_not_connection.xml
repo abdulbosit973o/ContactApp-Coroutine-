@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@drawable/bg_dialog_reset"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Placeholder
+        android:id="@+id/cancel"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="?selectableItemBackgroundBorderless"
+
+        android:src="@drawable/cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="64dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Do you want to log out?"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:src="@drawable/no_internet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="18sp"
+        android:text="Internet ishlamayapti. Iltimos\nulanishni tekshiring!"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <FrameLayout
+        android:id="@+id/retry_button"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/bg_press_btn"
+        app:cardBackgroundColor="@color/color_app_main"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        app:layout_constraintVertical_chainStyle="packed">
+
+    </FrameLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yangilash"
+        android:elevation="2dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunito_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/retry_button"
+        app:layout_constraintEnd_toEndOf="@+id/retry_button"
+        app:layout_constraintStart_toStartOf="@+id/retry_button"
+        app:layout_constraintTop_toTopOf="@+id/retry_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

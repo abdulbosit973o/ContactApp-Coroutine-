@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="?selectableItemBackgroundBorderless"
+        app:layout_constraintLeft_toRightOf="@id/vertical_start_component"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintRight_toLeftOf="@id/vertical_end_component"
+        app:layout_constraintBottom_toTopOf="@+id/input_number"
+        android:src="@drawable/back"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/input_number"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/vertical_start_component"
+        app:layout_constraintRight_toLeftOf="@id/vertical_end_component"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Tasdiq kodini kiriting"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_start_welcome"
+        app:layout_constraintTop_toTopOf="@+id/input_number"
+        app:layout_constraintRight_toRightOf="@+id/input_number"
+        android:elevation="2dp"
+        android:textSize="26sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintBottom_toBottomOf="@+id/input_number"/>
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        app:layout_constraintVertical_bias="0.8"
+        android:inputType="phone"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:maxLength="6"
+        app:layout_constraintRight_toLeftOf="@id/vertical_end_component"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_start_component"
+        app:layout_constraintTop_toTopOf="@+id/input_number"
+
+        app:layout_constraintBottom_toBottomOf="@id/input_number"
+        />
+
+    <TextView
+        android:id="@+id/send_code_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:text="Raqam SMS-kodlar va kirishni tiklash uchun kerak"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_start_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+        app:layout_constraintRight_toRightOf="@+id/input_number"
+        android:elevation="2dp"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintBottom_toBottomOf="@+id/input_number"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continue_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:text="Davom etish"
+        android:textColor="@color/white"
+        android:fontFamily="@font/work_sans"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_start_component"
+        app:layout_constraintRight_toLeftOf="@+id/vertical_end_component"
+        android:background="@drawable/bg_support_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_number"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/warning"
+        android:layout_width="250dp"
+        android:visibility="gone"
+        android:layout_height="42dp"
+        app:cardBackgroundColor="#DF2517"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_end_component"
+        app:layout_constraintStart_toStartOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/warning_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:src="@drawable/exclamation"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/warning"
+        app:layout_constraintEnd_toStartOf="@+id/warning_text"
+        app:layout_constraintStart_toStartOf="@+id/warning"
+        app:layout_constraintTop_toTopOf="@id/warning"
+        />
+    <TextView
+        android:id="@+id/warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:text="Code is went wrong"
+        android:fontFamily="@font/work_sans"
+        app:layout_constraintBottom_toBottomOf="@id/warning"
+        app:layout_constraintEnd_toEndOf="@+id/warning"
+        app:layout_constraintStart_toEndOf="@+id/warning_image"
+        app:layout_constraintTop_toTopOf="@id/warning"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07"
+        android:id="@+id/vertical_start_welcome"/>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03"
+        android:id="@+id/vertical_start_component"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97"
+        android:id="@+id/vertical_end_component"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
